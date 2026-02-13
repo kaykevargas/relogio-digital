@@ -1,6 +1,6 @@
 # Relógio Digital 🕒
 
-![Preview do Projeto](./relogio-digital.png)
+![Preview do Projeto](./assets/preview/preview.png)
 
 ## 📄 Descrição
 Projeto desenvolvido para colocar em prática os fundamentos de **JavaScript**, focado na manipulação do DOM e uso de funções de tempo (`setInterval`).
