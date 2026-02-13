@@ -1,50 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&display=swap');
+const horas = document.getElementById('horas');
+const minutos = document.getElementById('minutos');
+const segundos = document.getElementById('segundos');
 
-* {
-    margin: 0;
-    padding: 0;
-    font-family: 'Open Sans', sans-serif;
-}
+const relogio = setInterval(function time() {
+    let dateToday = new Date();
+    let hr = dateToday.getHours();
+    let min = dateToday.getMinutes();
+    let s = dateToday.getSeconds();
 
-body {
-    height: 100vh;
-    background: linear-gradient(120deg, #96bff7, #040830);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+    if (hr < 10) hr = '0' + hr;
 
-.relogio {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    height: 200px;
-    width: 550px;
-    background: transparent;
-    border-radius: 3px;
-    box-shadow: 0px 8px 10px rgba(0, 0, 0, .5);
-}
+    if (min < 10) min = '0' + min;
 
-.relogio div {
-    height: 170px;
-    width: 150px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-    background: rgba(5, 5, 5, .9);
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, .7);
-    border-radius: 7px;
-    letter-spacing: 3px;
-}
+    if (s < 10) s = '0' + s;
 
-.relogio span {
-    font-weight: bolder;
-    font-size: 60px;
-}
+    horas.textContent = hr;
+    minutos.textContent = min;
+    segundos.textContent = s;
 
-.relogio span.tempo {
-    font-size: 10px;
-
-}
+})
